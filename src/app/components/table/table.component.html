@@ -1,0 +1,37 @@
+<h3>Facturas con Petición GET a servicio en C# .NET y conexión a base de datos MongoDB</h3>
+<ng-container *ngIf="invoices">
+  <table>
+    <thead>
+    <tr>
+      <th>Código</th>
+      <th>Cliente</th>
+      <th>Ciudad</th>
+      <th>NIT</th>
+      <th>Total</th>
+      <th>Subtotal</th>
+      <th>IVA</th>
+      <th>Retención</th>
+      <th>Fecha de Creación</th>
+      <th>Estado</th>
+      <th>Pagada</th>
+      <th>Fecha de Pago</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let invoice of invoices">
+      <td>{{ invoice.InvoiceCode }}</td>
+      <td>{{ invoice.fullname }}</td>
+      <td>{{ invoice.City }}</td>
+      <td>{{ invoice.NIT }}</td>
+      <td>{{ invoice.InvioceFull }}</td>
+      <td>{{ invoice.SubTotal }}</td>
+      <td>{{ invoice.Iva }}</td>
+      <td>{{ invoice.Retencion }}</td>
+      <td>{{ invoice.CreationDate  | date: 'dd/MM/yyyy hh:mm' }}</td>
+      <td>{{ invoice.State }}</td>
+      <td>{{ invoice.Paid }}</td>
+      <td>{{ invoice.PaymentDate  | date: 'dd/MM/yyyy hh:mm'}}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>

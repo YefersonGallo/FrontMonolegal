@@ -1,0 +1,7 @@
+table, thead, tbody, tr, td, th {
+  border: gray 1px  solid;
+  align-content: center;
+}
+table{
+  border-collapse: collapse;
+}
